@@ -1,9 +1,9 @@
-# Use a base Debian image
+# Use a base Ubuntu image
 FROM ubuntu:latest
 
 # Update and install necessary packages
 RUN apt-get update && \
-    apt-get install -y wget gnupg software-properties-common
+    apt-get install -y wget gnupg software-properties-common nginx
 
 # Install Aptly and clean up
 RUN wget -O - https://www.aptly.info/pubkey.txt | apt-key add - && \
